@@ -1,0 +1,134 @@
+/* src/pages/Home.css */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.left {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    opacity: 0; /* Começa invisível */
+    animation: slideInLeft 1s forwards 0.5s; 
+}
+
+.left h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1s; 
+}
+
+.left p {
+    width: 600px;
+    color: #aa9e9e;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1.5s; 
+}
+
+.right > img {
+    width: 500px;
+    margin-right: 100px;
+    animation: flutter 3s ease-in-out infinite;
+    opacity: 0;
+    animation: fadeInRight 1s forwards 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flutter {
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        display: flex;
+    }
+
+    .left {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: justify; 
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+        margin-top: 50px;
+    }
+
+    .left p {
+        width: 90%;
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .right img {
+        width: 80%; 
+        margin: 20px 0; 
+        margin-left: 40px;
+    }
+
+    .left a {
+        padding: 10px 15px;
+    }
+}

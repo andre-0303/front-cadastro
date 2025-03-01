@@ -1,0 +1,136 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.containerForm {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #2e2d4e;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+
+    & button {
+        border-radius: 25px;
+        background-color: #8b8ae1;
+        border: none;
+        height: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.5s;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    & button:hover {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+
+    & input {
+        border: 1px solid #48456c;
+        border-radius: 25px;
+        height: 40px;
+        background-color: #363653;
+        color: #fff;
+        font-size: 16px;
+        padding-left: 10px;
+        outline: none;
+    }
+
+    & label {
+        color: #fff;
+        font-size: 1rem;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2e2d4e;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+
+    & p {
+        color: #fff;
+        font-weight: bold;
+
+        & span {
+            font-weight: normal;
+        }
+    }
+
+    & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    & button img {
+        width: 30px;
+        height: 30px;
+        filter: invert(17%) sepia(88%) saturate(7486%) hue-rotate(356deg) brightness(95%) contrast(111%);
+        transition: all 0.3s;
+    }
+
+    & button img:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+@media (max-width: 768px) {
+    form {
+        max-width: 80%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form input,
+    form button {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .card {
+        width: 90%; 
+        max-width: 300px; 
+        margin: 10px auto; 
+        padding: 15px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    
+    .card p {
+        font-size: 14px;
+    }
+    
+    .card button img {
+        width: 25px;
+        height: 25px;
+    }
+    
+}
